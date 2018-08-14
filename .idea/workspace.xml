@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31c3b051-437b-4812-842d-e3eefe8cc6cd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="31c3b051-437b-4812-842d-e3eefe8cc6cd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -265,7 +263,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32413000" />
+    <option name="totallyTimeSpent" value="32414000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,9 +445,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/mangham.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/mangham.scss" />
     <entry file="file://$PROJECT_DIR$/app/views/page/layout_test.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
