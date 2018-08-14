@@ -1,0 +1,137 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.kpu-wrap
+{
+  width : 1000px;
+  margin : 20px auto 0;
+
+
+  .kpu-header
+  {
+    width : 100%;
+    height : 80px;
+    background : url(kpu_01.gif) no-repeat;
+  }
+
+  .kpu-section
+  {
+    width : 100%;
+    height : 732px;
+    background : url(bodyBackground.jpg) repeat-y;
+
+    .kpu-article-left
+    {
+      margin-top : 20px;
+      width : 143px;
+      height : 712px;
+      float : left;
+      background: url(kpu_04.gif);
+    }
+
+    .kpu-section-middle
+    {
+      margin-top : 20px;
+      margin-left : 10px;
+      width : 620px;
+      height : 530px;
+      float : left;
+    }
+
+    .kpu-article-right
+    {
+      float : right;
+      margin-top : 20px;
+      width : 210px;
+      height : 530px;
+      background : url(kpu_08.gif) no-repeat;
+    }
+
+    .kpu-section-bottom
+    {
+      float : left;
+      margin-left : 10px;
+      width : 830px;
+      height : 182px;
+    }
+
+  } // .kpu-section end
+
+  .kpu-footer
+  {
+    width : inherit;
+    height : 140px;
+    background : url(kpu_24.png) no-repeat;
+
+  }
+
+} // .kpu-wrap end
+
+
+.kpu-section-middle
+{
+  .middle-article-top
+  {
+    width : inherit;
+    height : 300px;
+    background : url(kpu_06.gif);
+  }
+
+  .middle-section-down
+  {
+    margin-top : 10px;
+    width : inherit;
+    height : 220px;
+
+    .down-article-left
+    {
+      float : left;
+      width : 400px;
+      height : inherit;
+      background : url(kpu_10.gif);
+    }
+
+    .down-article-right
+    {
+      float : right;
+      width : 210px;
+      height : inherit;
+      background : url(kpu_12.gif) no-repeat;
+    }
+
+  }
+
+}
+
+.kpu-section-bottom
+{
+  .section-bottom-article
+  {
+    float : left;
+    height : 170px;
+    margin-right : 15px;
+    margin-top : 5px;
+  }
+
+  .section-bottom-article:nth-of-type(1)
+  {
+    width : 205px;
+    background : url(kpu_16.gif) no-repeat;
+    margin-left : 5px;
+  }
+
+  .section-bottom-article:nth-of-type(2)
+  {
+    width : 380px;
+    background : url(kpu_18.gif) no-repeat;
+  }
+
+  .section-bottom-article:nth-of-type(3)
+  {
+    width : 205px;
+    background : url(kpu_19.gif) no-repeat;
+    margin-right : 0;
+  }
+
+}

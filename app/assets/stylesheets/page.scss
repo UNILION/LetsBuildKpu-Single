@@ -1,0 +1,67 @@
+// Place all the styles related to the page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page-test-nav
+{
+  width : 100%;
+  background : tomato;
+  text-align : center;
+
+  .page-test-header
+  {
+    height : 40px;
+    line-height : 40px;
+
+    li {
+      /* 인라인 속성은 width 와 height 가 안먹히기 때문에 inline-block 을 쓴다.*/
+      display: inline-block;
+      margin-right:20px;
+
+    }
+  }
+}
+
+.page-test-header
+{
+  li
+  {
+    a
+    {
+      color:#000;
+      font-family: 'Jua', sans-serif;
+    }
+
+    a:hover
+    {
+      border-bottom : 2px solid #cfcfcf;
+    }
+
+
+  }
+}
+
+.selection
+{
+  width : 600px;
+  margin: 0 auto;
+  border-bottom : 2px solid #cfcfcf;
+  text-align:left;
+
+  span
+  {
+    font-size : 20px;
+  }
+
+  .like-food-select
+  {
+    float:right;
+  }
+
+  &::after
+  {
+    content:'';
+    display:block;
+    clear:both;
+  }
+}

@@ -1,0 +1,264 @@
+gem 'bootstrap' , '~> 4.1.1'
+
+~>
+: 버전 표시해주는 것
+
+ctrl + space
+: 자동 완성
+
+app - assets - stylesheets 에 css 파일 넣기
+
+stylesheets 가 css 관련 폴더
+
+normalize : 완전히 부라우저를 똑같은 속성으로 초기화
+reset : 개인적인 설정을 normailze 위에 얹혀서 초기화
+
+image 에 사진들 넣기
+
+javascripts 에 application.js 들어가서 설정잡기
+//= require jquery3
+//= require jquery_ujs
+//= require popper
+//= require bootstrap-sprockets
+//= require turbolinks
+//= require_tree .
+
+
+stylesheets 에 application.css 에 가서 설정잡기
+
+ *= require default/normalize
+ *= require default/reset
+ *= require_tree .
+ *= require_self
+ */
+
+위에 부터 시행하기 때문에 순서 중요!
+재로딩 시간 줄여줌
+require_tree . 은 현재위치에 모든 파일을 넣는다.
+
+
+rails g controller home index
+
+config - routes.rb 에 root 'home#index' 추가
+
+
+app - views - layouts - application.html.erb 에서
+<%= yield %> 부분에서 각 페이지를 로딩하는 것이다.
+
+
+app - views - home - index.html.erb 에서 다음과 같이 작성한다.
+
+<div class = "kpu-wrap">
+  <header class = "kpu-header"></header>
+
+  <section class="kpu-section">
+
+    <article class="kpu-article-left"></article>
+
+    <section class="kpu-section-middle">
+      <article class="middle-article-top"></article>
+      <section class="middle-section-down">
+      <article class="down-article-left"></article>
+      <article class="down-article-right"></article>
+      </section>
+    </section> <!-- .kpu-section-middle end -->
+
+    <article class="kpu-article-right"></article>
+
+    <section class="kpu-section-bottom">
+      <article class="section-bottom-article"></article>
+      <article class="section-bottom-article"></article>
+      <article class="section-bottom-article"></article>
+
+
+    </section> <!-- .kpu-section-bottom end -->
+  </section> <!-- .kpu-section end -->
+
+  <footer class="kpu-footer"></footer>
+</div> <!-- .kpu-wrap end -->
+
+
+
+
+app - assets - stylesheets - home.scss 에서 다음과 같이 작성한다.
+
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.kpu-wrap
+{
+  width : 1000px;
+  margin : 20px auto 0;
+
+
+  .kpu-header
+  {
+    width : 100%;
+    height : 80px;
+    background : url(kpu_01.gif) no-repeat;
+  }
+
+  .kpu-section
+  {
+    width : 100%;
+    height : 732px;
+    background : url(bodyBackground.jpg) repeat-y;
+
+    .kpu-article-left
+    {
+      margin-top : 20px;
+      width : 143px;
+      height : 712px;
+      float : left;
+      background: url(kpu_04.gif);
+    }
+
+    .kpu-section-middle
+    {
+      margin-top : 20px;
+      margin-left : 10px;
+      width : 620px;
+      height : 530px;
+      float : left;
+    }
+
+    .kpu-article-right
+    {
+      float : right;
+      margin-top : 20px;
+      width : 210px;
+      height : 530px;
+      background : url(kpu_08.gif) no-repeat;
+    }
+
+    .kpu-section-bottom
+    {
+      float : left;
+      margin-left : 10px;
+      width : 830px;
+      height : 182px;
+    }
+
+  } // .kpu-section end
+
+  .kpu-footer
+  {
+    width : inherit;
+    height : 140px;
+    background : url(kpu_24.png) no-repeat;
+
+  }
+
+} // .kpu-wrap end
+
+
+.kpu-section-middle
+{
+  .middle-article-top
+  {
+    width : inherit;
+    height : 300px;
+    background : url(kpu_06.gif);
+  }
+
+  .middle-section-down
+  {
+    margin-top : 10px;
+    width : inherit;
+    height : 220px;
+
+    .down-article-left
+    {
+      float : left;
+      width : 400px;
+      height : inherit;
+      background : url(kpu_10.gif);
+    }
+
+    .down-article-right
+    {
+      float : right;
+      width : 210px;
+      height : inherit;
+      background : url(kpu_12.gif) no-repeat;
+    }
+
+  }
+
+}
+
+.kpu-section-bottom
+{
+  .section-bottom-article
+  {
+    float : left;
+    height : 170px;
+    margin-right : 15px;
+    margin-top : 5px;
+  }
+
+  .section-bottom-article:nth-of-type(1)
+  {
+    width : 205px;
+    background : url(kpu_16.gif) no-repeat;
+    margin-left : 5px;
+  }
+
+  .section-bottom-article:nth-of-type(2)
+  {
+    width : 380px;
+    background : url(kpu_18.gif) no-repeat;
+  }
+
+  .section-bottom-article:nth-of-type(3)
+  {
+    width : 205px;
+    background : url(kpu_19.gif) no-repeat;
+    margin-right : 0;
+  }
+
+}
+
+
+
+높이는 차면 계속 차도록 두기 위해 설정을 안한다.
+
+auto 는 좌우에 적용되서 가운데에 맞춰준다.
+20px auto 이면 위아래 20px, 좌우 auto
+margin 은 위에부터 시계방향 순
+
+
+height : inherit;
+바로 위에 자신을 감싸는 녀석의 값을 상속받는다.
+
+after 는 가상선택자로
+content는 끝을 알리는 내용으로 해당 부분이 끝나고 content 내용을 보여준다.
+
+
+  .section-bottom-article:nth-of-type(1)
+n번째 중에 속성이 1부터 시작이다.
+
+
+background : url(kpu_01.gif) no-repeat;
+div 가 사진보다 클 경우
+no-repeat 를 안쓰면 바둑판으로 반복되서 보여진다.
+no-repeat 를 쓰면 사진을 한번만 보여준다.
+repeat-x 는 x축(가로)으로 반복된다.
+repeat-y 는 y축(세로)으로 반복된다.
+
+HTML5 부터 div 도 의미있게 해주기 때문에 시멘틱 태그가 생겼다.
+<header>
+<article>
+<nav>
+<footer>
+<section>
+...
+section 안에 article 이 있다.
+section 이 본문이라면 article 은 소주제 정도
+
+전부 div 랑 같은 기능인데 의미만 부여해준 것임
+
+전부 block 속성이라서 다음에 쓸 때 한줄이 띄어진다. 그래서 속하기 위해서 float 으로 띄어진다.
+
+float : 공중에 띄어주는 속성
